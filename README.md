@@ -1,6 +1,6 @@
 <div align="center" style="display:grid;place-items:center;">
 <p>
-    <a href="https://vlang.io/" target="_blank"><img width="80" src="https://raw.githubusercontent.com/vlang/v-logo/master/dist/v-logo.svg?sanitize=true" alt="V logo"></a>
+    <a href="https://vlang.io/" target="_blank"><img width="80" src="https://raw.githubusercontent.com/vlang/v-logo/master/dist/v-logo.svg?sanitize=true" alt="Y logo"></a>
 </p>
 <h1>The Y Programming Language</h1>
 
@@ -22,10 +22,10 @@
 - Simplicity: the language can be learned in a weekend
 - Fast compilation: ≈110k loc/s with a Clang backend,
     ≈500k loc/s with native and tcc backends *(Intel i5-7500, SSD, no optimization)* ([demo video](https://www.youtube.com/watch?v=pvP6wmcl_Sc))
-- Easy to develop: V compiles itself in less than a second
+- Easy to develop: Y compiles itself in less than a second
 - Performance: as fast as C (Y's main backend compiles to human-readable C)
 - Safety: no null, no globals, no undefined behavior, immutability by default
-- C to V translation ([Translating DOOM demo video](https://www.youtube.com/watch?v=6oXrz3oRoEg))
+- C to Y translation ([Translating DOOM demo video](https://www.youtube.com/watch?v=6oXrz3oRoEg))
 - Hot code reloading
 - [Innovative memory management](https://vlang.io/#memory) ([demo video](https://www.youtube.com/watch?v=gmB8ea8uLsM))
 - [Cross-platform UI library](https://github.com/vlang/ui)
@@ -46,7 +46,7 @@ There still may be minor syntax changes before the 1.0 release, but they will be
 automatically via `yfmt`, as has been done in the past.
 
 The Y core APIs (primarily the `os` module) will still have minor changes until
-they are stabilized in V 1.0. Of course the APIs will grow after that, but without breaking
+they are stabilized in Y 1.0. Of course the APIs will grow after that, but without breaking
 existing code.
 
 Unlike many other languages, Y is not going to be always changing, with new features
@@ -58,7 +58,7 @@ language, very similar to the way it is right now.
 --> **_(this is the preferred method)_**
 
 ### Linux, macOS, Windows, *BSD, Solaris, WSL, etc.
-Usually installing V is quite simple if you have an environment that already has a
+Usually installing Y is quite simple if you have an environment that already has a
 functional `git` installation.
 
 To get started, simply try to execute the following in your terminal/shell:
@@ -69,8 +69,8 @@ make
 # HINT: Using Windows? run make.bat in a cmd shell, or ./make.bat in PowerShell
 ```
 
-That should be it and you should find your V executable at `[path to V repo]/v`.
-`[path to V repo]` can be anywhere.
+That should be it and you should find your Y executable at `[path to Y repo]/v`.
+`[path to Y repo]` can be anywhere.
 
 (As in the hint above, on Windows `make` means running `make.bat`.)
 
@@ -79,7 +79,7 @@ Now you can try `./v run examples/hello_world.v` (or `v run examples/hello_world
 * *Trouble? Please see the note above and link to
 [Installation Issues](https://github.com/vlang/v/discussions/categories/installation-issues) for help.*
 
-V is constantly being updated. To update V, simply run:
+Y is constantly being updated. To update Y, simply run:
 
 ```bash
 v up
@@ -94,11 +94,11 @@ doesn't yet exist for your OS.)*
 
 ### C compiler
 The [Tiny C Compiler (tcc)](https://repo.or.cz/w/tinycc.git) is downloaded for you by `make` if
-there is a compatible version for your system, and installed under the V `thirdparty` directory.
+there is a compatible version for your system, and installed under the Y `thirdparty` directory.
 
 This compiler is very fast, but does almost no optimizations.  It is best for development builds.
 
-For production builds (using the `-prod` option to V), it's recommended to use clang, gcc, or
+For production builds (using the `-prod` option to Y), it's recommended to use clang, gcc, or
 Microsoft Visual C++. If you are doing development, you most likely already have one of those
 installed.
 
@@ -109,9 +109,9 @@ Otherwise, follow these instructions:
 - [Installing a C compiler on Windows](https://github.com/vlang/v/wiki/Installing-a-C-compiler-on-Windows)
 
 ### Symlinking
-NB: it is *highly recommended*, that you put V on your PATH. That saves
+NB: it is *highly recommended*, that you put Y on your PATH. That saves
 you the effort to type in the full path to your v executable every time.
-V provides a convenience `v symlink` command to do that more easily.
+Y provides a convenience `v symlink` command to do that more easily.
 
 On Unix systems, it creates a `/usr/local/bin/v` symlink to your
 executable. To do that, run:
@@ -122,7 +122,7 @@ sudo ./v symlink
 
 On Windows, start a new shell with administrative privileges, for example by pressing the
 <kbd>Windows Key</kbd>, then type `cmd.exe`, right-click on its menu entry, and choose `Run as
-administrator`. In the new administrative shell, cd to the path where you have compiled V, then
+administrator`. In the new administrative shell, cd to the path where you have compiled Y, then
 type:
 
 ```bat
@@ -130,11 +130,11 @@ v symlink
 ```
 (or `./v symlink` in PowerShell)
 
-That will make V available everywhere, by adding it to your PATH. Please restart your
+That will make Y available everywhere, by adding it to your PATH. Please restart your
 shell/editor after that, so that it can pick up the new PATH variable.
 
 NB: there is no need to run `v symlink` more than once - v will still be available, even after
-`v up`, restarts, and so on.  You only need to run it again if you decide to move the V repo
+`v up`, restarts, and so on.  You only need to run it again if you decide to move the Y repo
 folder somewhere else.
 
 
@@ -170,7 +170,7 @@ docker run --rm -it vlang:latest
 </details>
 
 ### Termux/Android
-On Termux, V needs some packages preinstalled - a working C compiler, also `libexecinfo`,
+On Termux, Y needs some packages preinstalled - a working C compiler, also `libexecinfo`,
 `libgc` and `libgc-static`. After installing them, you can use the same script, like on
 Linux/macos:
 ```bash
@@ -181,11 +181,11 @@ make
 ```
 
 ## Testing and running the examples
-Make sure V can compile itself:
+Make sure Y can compile itself:
 ```bash
 $ v self
 $ v
-V 0.3.x
+Y 0.3.x
 Use Ctrl-C or `exit` to exit
 
 >>> println('hello world')
@@ -212,9 +212,9 @@ For Fedora/RH/CentOS, you need to run this:
 For NixOS, add these packages to your `environment.systemPackages`:
 `xorg.libX11.dev xorg.libXcursor.dev xorg.libXi.dev libGL.dev`
 
-## V net.http, net.websocket, `v install`
+## Y net.http, net.websocket, `v install`
 The net.http module, the net.websocket module, and the `v install` command may all use SSL.
-V comes with a version of mbedtls, which should work on all systems.  If you find a need to
+Y comes with a version of mbedtls, which should work on all systems.  If you find a need to
 use OpenSSL instead, you will need to make sure that it is installed on your system, then
 use the `-d use_openssl` switch when you compile.
 
@@ -237,8 +237,8 @@ sudo dnf install openssl-devel
 On Windows, OpenSSL is simply hard to get working correctly.  The instructions
 [here](https://tecadmin.net/install-openssl-on-windows/) may (or may not) help.
 
-## V sync
-V's `sync` module and channel implementation uses libatomic.
+## Y sync
+Y's `sync` module and channel implementation uses libatomic.
 It is most likely already installed on your system, but if not,
 you can install it, by doing the following:
 ```bash
@@ -251,9 +251,9 @@ Fedora/CentOS/RH:
 sudo dnf install libatomic-static
 ```
 
-## V UI
+## Y UI
 <a href="https://github.com/vlang/ui">
-<img src='https://raw.githubusercontent.com/vlang/ui/master/examples/screenshot.png' width=712 alt='V UI example screenshot'>
+<img src='https://raw.githubusercontent.com/vlang/ui/master/examples/screenshot.png' width=712 alt='Y UI example screenshot'>
 </a>
 
 https://github.com/vlang/ui
@@ -266,21 +266,21 @@ https://github.com/vlang/ui
 ```v
 fn main() {
 	for i in 0 .. 3 {
-		println('Hello from V.js')
+		println('Hello from Y.js')
 	}
 }
 ```
 
 ```bash
 v -o hi.js examples/hello_v_js.v && node hi.js
-Hello from V.js
-Hello from V.js
-Hello from V.js
+Hello from Y.js
+Hello from Y.js
+Hello from Y.js
 ```
 -->
 
 ## Android graphical apps
-With V's `vab` tool, building V UI and graphical apps for Android can become as easy as:
+With Y's `vab` tool, building Y UI and graphical apps for Android can become as easy as:
 ```
 ./vab /path/to/v/examples/2048
 ```
@@ -295,17 +295,14 @@ https://github.com/vlang/gitly
 
 <img src="https://user-images.githubusercontent.com/687996/85933714-b195fe80-b8da-11ea-9ddd-09cadc2103e4.png" alt="gitly screenshot">
 
-## Vinix, an OS/kernel written in V
-V is great for writing low-level software like drivers and kernels.
-Vinix is an OS/kernel that already runs bash, GCC, V, and nano.
+## Vinix, an OS/kernel written in Y
+Y is great for writing low-level software like drivers and kernels.
+Vinix is an OS/kernel that already runs bash, GCC, Y, and nano.
 
 https://github.com/vlang/vinix
 
 <img src="https://github.com/vlang/vinix/blob/main/screenshot0.png?raw=true" alt="vinix screenshot 1">
 <img src="https://github.com/vlang/vinix/blob/main/screenshot1.png?raw=true" alt="vinix screenshot 2">
-
-## Acknowledgement
-V thanks Fabrice Bellard for his original work on the [TCC - Tiny C Compiler](https://bellard.org/tcc/). Note the TCC website is old; the current TCC repository can be found [here](https://repo.or.cz/w/tinycc.git).  V utilizes pre-built TCC binaries located at [https://github.com/vlang/tccbin/](https://github.com/vlang/tccbin/).
 
 ## Troubleshooting
 Please see the [Troubleshooting](https://github.com/vlang/v/wiki/Troubleshooting) section on our [wiki page](https://github.com/vlang/v/wiki)
