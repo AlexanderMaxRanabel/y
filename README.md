@@ -2,7 +2,7 @@
 <p>
     <a href="https://vlang.io/" target="_blank"><img width="80" src="https://raw.githubusercontent.com/vlang/v-logo/master/dist/v-logo.svg?sanitize=true" alt="V logo"></a>
 </p>
-<h1>The V Programming Language</h1>
+<h1>The Y Programming Language</h1>
 
 [vlang.io](https://vlang.io) | [Docs](https://github.com/vlang/v/blob/master/doc/docs.md) | [Changelog](https://github.com/vlang/v/blob/master/CHANGELOG.md) | [Speed](https://fast.vlang.io/) | [Contributing & compiler design](https://github.com/vlang/v/blob/master/CONTRIBUTING.md)
 </div>
@@ -18,12 +18,12 @@
 [![Twitter][ModulesBadge]][ModulesUrl]
 </div>
 
-## Key Features of V
+## Key Features of Y
 - Simplicity: the language can be learned in a weekend
 - Fast compilation: ≈110k loc/s with a Clang backend,
     ≈500k loc/s with native and tcc backends *(Intel i5-7500, SSD, no optimization)* ([demo video](https://www.youtube.com/watch?v=pvP6wmcl_Sc))
 - Easy to develop: V compiles itself in less than a second
-- Performance: as fast as C (V's main backend compiles to human-readable C)
+- Performance: as fast as C (Y's main backend compiles to human-readable C)
 - Safety: no null, no globals, no undefined behavior, immutability by default
 - C to V translation ([Translating DOOM demo video](https://www.youtube.com/watch?v=6oXrz3oRoEg))
 - Hot code reloading
@@ -38,22 +38,22 @@
 - Great for writing low-level software ([Vinix OS](https://github.com/vlang/vinix))
 
 ## Stability guarantee and future changes
-Despite being at an early development stage, the V language is relatively stable and has
+Despite being at an early development stage, the Y language is relatively stable and has
 backwards compatibility guarantee, meaning that the code you write today is guaranteed
 to work a month, a year, or five years from now.
 
 There still may be minor syntax changes before the 1.0 release, but they will be handled
-automatically via `vfmt`, as has been done in the past.
+automatically via `yfmt`, as has been done in the past.
 
-The V core APIs (primarily the `os` module) will still have minor changes until
+The Y core APIs (primarily the `os` module) will still have minor changes until
 they are stabilized in V 1.0. Of course the APIs will grow after that, but without breaking
 existing code.
 
-Unlike many other languages, V is not going to be always changing, with new features
+Unlike many other languages, Y is not going to be always changing, with new features
 being introduced and old features modified. It is always going to be a small and simple
 language, very similar to the way it is right now.
 
-## Installing V from source
+## Installing Y from source
 
 --> **_(this is the preferred method)_**
 
